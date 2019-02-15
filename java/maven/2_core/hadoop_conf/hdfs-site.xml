@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!-- hdfs-site.xml -->
+<configuration>
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
+    </property>
+    <!--property>
+        <name>dfs.client.block.write.replace-datanode-on-failure.enable</name>
+        <value>false</value>
+    </property-->
+    <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>/tmp/hadoop/namedir1</value>
+    </property>
+    <!--property>
+        <name>dfs.datanode.data.dir</name>
+        <value>/tmp/hadoop/data1,/tmp/hadoop/data2</value>
+    </property-->
+    <property>
+        <name>dfs.namenode.checkpoint.dir</name>
+        <value>/tmp/hadoop/checkpointdir1,/tmp/hadoop/checkpointdir2</value>
+    </property>
+</configuration>

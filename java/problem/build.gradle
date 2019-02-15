@@ -1,0 +1,34 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+jar {
+    baseName = 'problem'
+    version = '0.0.1-SNAPSHOT'
+}
+
+dependencies {
+    compile 'org.projectlombok:lombok:1.16.18'
+    compile 'org.javatuples:javatuples:1.2'
+    compile 'com.google.guava:guava:18.0'
+    compile 'org.javatuples:javatuples:1.2'
+    compile 'org.jbehave:jbehave-core:4.0.2'
+    compile 'org.jbehave:jbehave-guice:4.0.2'
+
+    testCompile('org.testng:testng:6.8')
+}
+
+task testng(type: Test) {
+    useTestNG()
+    scanForTestClasses = true
+    include '**/*'
+
+    testLogging {
+        showStandardStreams = true
+
+        // log results to 'build/test-results' directory
+        exceptionFormat 'full'
+        events 'started', 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
+    }
+}
+
+check.dependsOn testng

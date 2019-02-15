@@ -1,0 +1,5 @@
+rootProject.name = 'sandbox'
+
+include 'problem'
+include 'query-executor'
+include 'hazelcast-performance'

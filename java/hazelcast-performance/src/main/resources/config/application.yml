@@ -1,0 +1,6 @@
+spring:
+  datasource:
+      driver-class-name: oracle.jdbc.OracleDriver
+      url: jdbc:oracle:thin://@mgmwfmora03:1521/ora12prg04
+      username: FC_MASS_TEST
+      password: FC_MASS_TEST
