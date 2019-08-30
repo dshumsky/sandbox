@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  mock-server:
+    container_name: mock-server
+    image: "jamesdbloom/mockserver:mockserver-5.6.1"
+    ports:
+      - 1080:1080
+    volumes:
+      - ${PWD}/config.json:/config.json:ro
+    environment:
+      LOG_LEVEL: "INFO"
+      JVM_OPTIONS: "-Dmockserver.initializationJsonPath=/config.json"

@@ -1,0 +1,5 @@
+[
+{"httpRequest": {"path": "/mockserver1"       }, "httpResponse":{ "body": "mockserver1-home"}},
+{"httpRequest": {"path": "/mockserver1/health"}, "httpResponse":{ "body": "mockserver1-health"}},
+{"httpRequest": {"path": "/mockserver1/mock"  }, "httpResponse":{ "body": "mockserver1-mock"}}
+]

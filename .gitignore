@@ -8,15 +8,3 @@ buildSrc/build/
 out/
 rebel.xml
 node_modules/
-package-lock.json
-
-
-java/maven/3_web/src/main/resources/static/node/
-java/maven/3_web/src/main/resources/static/node_modules/
-java/maven/3_web/src/main/resources/static/bower_components/
-java/maven/3_web/src/main/resources/static/css/style.css
-java/maven/3_web/src/main/resources/static/css/fixed-data-table.css
-java/maven/3_web/src/main/resources/static/fonts/
-java/maven/3_web/src/main/resources/static/js/reactjs.example.js
-java/maven/3_web/src/main/resources/static/js/bootstrap.js
-java/maven/2_core/data/h2*

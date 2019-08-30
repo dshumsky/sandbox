@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "mockserver.name" . }}-config
+  namespace: {{ .Release.Namespace }}
+data:
+  config.json: |
+{{ .Files.Get .Values.config | indent 4}}

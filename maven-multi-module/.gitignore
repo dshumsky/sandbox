@@ -1,0 +1,9 @@
+3_web/src/main/resources/static/node/
+3_web/src/main/resources/static/node_modules/
+3_web/src/main/resources/static/bower_components/
+3_web/src/main/resources/static/css/style.css
+3_web/src/main/resources/static/css/fixed-data-table.css
+3_web/src/main/resources/static/fonts/
+3_web/src/main/resources/static/js/reactjs.example.js
+3_web/src/main/resources/static/js/bootstrap.js
+2_core/data/h2*

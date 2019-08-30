@@ -1,0 +1,37 @@
+nameOverride: mockserver2
+config: config-2.json
+replicaCount: 1
+
+app:
+  logLevel: "INFO"
+  serverPort: "1080"
+
+image:
+  repository: jamesdbloom
+  snapshot: false
+  pullPolicy: IfNotPresent
+
+service:
+  annotations:
+    alb.ingress.kubernetes.io/healthcheck-interval-seconds: '30'
+    alb.ingress.kubernetes.io/healthcheck-path: '/mockserver2/health'
+  clusterIP: ""
+  externalIPs: []
+  loadBalancerIP: ""
+  loadBalancerSourceRanges: []
+  type: NodePort
+  port: 1080
+  nodePort: ""
+
+ingress:
+  path: /mockserver2
+
+podAnnotations: {}
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

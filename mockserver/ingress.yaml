@@ -1,0 +1,52 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: mockserver-root
+  annotations:
+    kubernetes.io/ingress.class: merge
+    merge.ingress.kubernetes.io/config: merged-ingress
+    merge.ingress.kubernetes.io/priority: "0"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: release-name-mockserver-root
+          servicePort: serviceport
+---
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: mockserver1
+  annotations:
+    kubernetes.io/ingress.class: merge
+    merge.ingress.kubernetes.io/config: merged-ingress
+    merge.ingress.kubernetes.io/priority: "1"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /mockserver1/*
+        backend:
+          serviceName: release-name-mockserver1
+          servicePort: serviceport
+---
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: mockserver2
+  annotations:
+    kubernetes.io/ingress.class: merge
+    merge.ingress.kubernetes.io/config: merged-ingress
+    merge.ingress.kubernetes.io/priority: "1"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /mockserver2/*
+        backend:
+          serviceName: release-name-mockserver2
+          servicePort: serviceport

@@ -1,0 +1,7 @@
+[
+  {"httpRequest": {"path": "/"      }, "httpResponse":{
+    "body": "<html><body><h3>root-home</h3><br/><a href=\"/\">Home</a><br/><a href=\"/mock\">/mock</a><br/><a href=\"/mockserver1/mock\">/mockserver1/mock</a><br/><a href=\"/mockserver2/mock\">/mockserver2/mock</a></body></html>"
+  }},
+  {"httpRequest": {"path": "/health"}, "httpResponse":{ "body": "root-health"}},
+  {"httpRequest": {"path": "/mock"  }, "httpResponse":{ "body": "root-mock"}}
+]
